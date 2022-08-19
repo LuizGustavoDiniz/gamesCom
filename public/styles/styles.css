@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+    list-style: none;
+}
+
+html{
+    font-size: 62.5%;
+    transition: all 0.5s linear;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #1b1b1b;
+}
+
+.menu-container{
+    height: 7rem;
+    background-color: #1151ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3.5rem;
+}
+
+.menu-container ul{
+    display: flex;
+    font-size: 1.2rem;
+    
+}
+
+.menu-container ul li{
+    margin-left: 2rem;
+}
+
+.menu-container ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: lighter;
+}
