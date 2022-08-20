@@ -8,6 +8,7 @@ const os = require('os')
 const app = express()
 const connection = require('./Database/database')
 const gamesRoutes = require('./routes/gamesRoutes')
+const authRoutes = require('./routes/authRoutes')
 
 const handlebars = hbs.create({
     partialsDir: ["views/partials"]
@@ -40,12 +41,23 @@ app.use(
 app.use(flash())
 app.use(express.static('public'))
 
+app.use((req, res, next) => {
+    if(req.session.userid){
+       res.locals.session = req.session
+    }
+
+    next()
+})
+
 // ============ imports e configs iniciais ============= //
 
 // ============ chamada das rotas =============== //
 
 app.use('/home', gamesRoutes)
-
+app.use('/', authRoutes)
+app.get('/', (req, res) => {
+    res.render('auth/login')
+})
 
 connection.sync({force:false}).then(() => {
     app.listen(3000, () => {
