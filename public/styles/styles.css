@@ -20,11 +20,11 @@ body{
 
 .menu-container{
     height: 7rem;
-    background-color: #035efc;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 3.5rem;
+    border-bottom: 2px solid #035efc;
 }
 
 .menu-container ul{
@@ -52,42 +52,43 @@ body{
 
 /*===== FORM =====*/
 
-.form-container{
+.form-register-container{
     max-width: 45rem;
     margin: 0 auto;
     display: flex;
     flex-flow: column;
     padding: 1rem 1rem;
+    position: relative;
 }
 
-.form-container h2{
+.form-register-container h2{
     font-size: 3rem;
     border-left: 3px solid #035efc;
     padding: 0.5rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
     margin-bottom: 1.6rem;
     color: #fff;
 }
 
-.form-container form .form-group{
+.form-register-container form .form-group{
     display: flex;
     flex-direction: column;
     margin-bottom: 1.6rem;
 }
 
-.form-container form .form-group label{
+.form-register-container form .form-group label{
     color: #fff;
     font-size: 1.6rem;
     font-weight: bold;
 }
 
-.form-container form .form-group input{
+.form-register-container form .form-group input{
     padding: 1rem;
     border: none;
     outline: none;
 }
 
-.form-container form input[type="submit"],
+.form-register-container form input[type="submit"],
 .btn{
     font-weight: 500;
     padding: 1rem;
@@ -101,26 +102,108 @@ body{
     transition: 0.5s;
 }
 
-.form-container form input[type="submit"]:hover,
+.form-register-container form input[type="submit"]:hover,
 .btn:hover{
     color: #035efc;
     border-color: #035efc;
 }
 
-.form-container form p{
+.form-register-container form p{
     font-size: 1.6rem;
     color: #fff;
 }
 
-.form-container form p a{
+.form-register-container form p a{
     color: #035efc;
 }
 
+/*===== LOGIN PART =====*/
+
+.login-container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../img/xK.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-dark{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.form-login-container{
+    max-width: 45rem;
+    display: flex;
+    flex-flow: column;
+    transform: translateY(60%);
+    padding: 1rem 1rem;
+    position: relative;
+    margin-left: 9rem;
+}
+
+.form-login-container h2{
+    font-size: 3rem;
+    border-left: 3px solid #035efc;
+    padding: 0.5rem;
+    margin-bottom: 1.6rem;
+    color: #fff;
+}
+
+.form-login-container form .form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.6rem;
+}
+
+.form-login-container form .form-group label{
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.form-login-container form .form-group input{
+    padding: 1rem;
+    border: none;
+    outline: none;
+}
+
+.form-login-container form input[type="submit"],
+.btn{
+    font-weight: 500;
+    padding: 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    background: none;
+    color: #fff;
+    border-color: #fff;
+    margin-bottom: 1.6rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+
+.form-login-container form input[type="submit"]:hover,
+.btn:hover{
+    color: #035efc;
+    border-color: #035efc;
+}
+
+.form-login-container form p{
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.form-login-container form p a{
+    color: #035efc;
+}
 
 /*===== FOOTER =====*/
 
 footer{
-    background-color: #035efc;
+    border-top: 2px solid #035efc;
     height: 20.9vh;
     display: flex;
     justify-content: center;
@@ -128,7 +211,7 @@ footer{
 }
 
 footer p{
-    color: #1b1b1b;
+    color: #fff;
     font-size: 1.6rem;
     font-weight: bold;
 }
