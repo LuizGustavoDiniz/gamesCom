@@ -1,8 +1,20 @@
 
 {{>navbar}}
 
+<h1 class="title">jogos</h1>
+
 <div class="container">
-<h1>Todos os jogos aqui!</h1>
+
+    {{#each games}}
+
+   <div class="card">
+    <img src="{{{this.thumbnail}}}" alt="poster">
+    <h3>{{{this.title}}}</h3>
+   </div>
+    {{/each}}
+
+
+
 </div>
 
 
